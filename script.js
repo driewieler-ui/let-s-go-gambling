@@ -2,14 +2,13 @@ let balance = 100;
 const symbols = ['🍒', '🍋', '🍊', '🍇', '🔔', '💎', '7️⃣'];
 
 function spinSlots() {
-    const betInput = document.getElementById('bet');
-    const betAmount = parseInt(betInput.value);
+    const betAmount = 5; // De inzet staat nu muurvast op 5 muntjes
     const msg = document.getElementById('message');
     const btn = document.getElementById('spin-btn');
     
-    // Validatie van de inzet
-    if (isNaN(betAmount) || betAmount <= 0 || betAmount > balance) {
-        msg.innerHTML = "❌ <span style='color:red;'>Ongeldige inzet of onvoldoende saldo!</span>";
+    // Validatie van het saldo
+    if (balance < betAmount) {
+        msg.innerHTML = "❌ <span style='color:red;'>Onvoldoende saldo voor de inzet van 5 muntjes!</span>";
         return;
     }
 
