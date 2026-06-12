@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Gokkast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="casino-container">
+        <h1>🎰 VIRTUAL SLOTS 🎰</h1>
+        <p class="balance-display">Saldo: €<span id="balance">100</span></p>
+        
+        <!-- De drie rollen van de gokkast -->
+        <div class="slot-machine">
+            <div class="slot" id="slot1">🍒</div>
+            <div class="slot" id="slot2">🍒</div>
+            <div class="slot" id="slot3">🍒</div>
+        </div>
+
+        <div class="controls">
+            <label>Inzet: €<input type="number" id="bet" value="5" min="1" max="100"></label>
+            <button id="spin-btn" onclick="spinSlots()">DRAAIEN!</button>
+        </div>
+
+        <p id="message">Zet in en beproef je geluk!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
